@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(72, 163, 0, 0.07);
+    font-family: "Poppins", serif;
+    
+}
+
+
+main{
+    margin: 0 16px;
+}
+.heading{
+    font-size: 64px;
+    color: rgba(72, 163, 0, 1);
+    text-align: center;
+}
+.heading span{
+    color: rgba(97, 72, 28, 1);
+}
+
+.app-container{
+    background-color: rgba(251, 251, 251, 1);
+    max-width: 660px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 32px 42px;
+    box-shadow: 0 0 6px 2px rgb(0, 0, 0, 0.1);
+}
+.sun-image{
+    vertical-align: middle;
+    margin-left: 16px
+}
+
+.progress-label{
+    font-size: 14px;
+    color: rgba(133, 133, 133, 1);
+}
+.progress-bar{
+    height: 30px;
+    background-color: rgba(72, 163, 0, 0.1);
+    border-radius: 15px;
+}
+
+.progress-value{
+    height: 100%;
+    background-color: rgba(72, 163, 0, 1);
+    width: 0;
+    border-radius: 15px;
+    font-weight: 500px;
+    font-size: 10px;
+    color: rgba(238, 255, 224, 1);
+    display: flex;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.progress-value  span{
+    padding-left: 20px;
+}
+
+
+
+/* error remails hidden all the time */
+.error-label{
+    color: rgba(255, 81, 81, 1);
+    font-size: 14px;
+
+    /* display: none; will keep disturbing the below elements so we will not use it */
+    
+    visibility: hidden;
+        /* Make it invisible, but keep its space */
+    opacity: 0;
+        /* Fully transparent */
+    margin-bottom: 10px;
+        /* Ensure space between error and below content */
+}
+
+
+
+/* error shows up when parent has class show on it */
+.show .error-label{
+    color: rgba(255, 81, 81, 1);
+    font-size: 14px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.goal-container{
+    border-radius: 17px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 82px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+
+    margin-bottom: 40px;
+
+
+}
+.custom-checkbox{
+    height: 24px;
+    width: 24px;
+    border: 2px solid rgba(97, 72, 28, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.check-icon{
+    display: none;
+}
+
+
+/* check icon gets displayed only when parent element have class completed on it */
+.completed .check-icon{
+    display: block;
+}
+
+.goal-input{
+    padding: 22px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    font-weight: 500;
+
+
+    /* to give max area to user for typing */
+    /* padding-left: 22px;*/
+    align-self: stretch; 
+    width: 100%;
+
+    &::placeholder{
+        color: rgba(217, 217, 217, 1);
+    }
+
+}
+
+.completed .goal-input{
+    color: rgba(72, 163, 0, 1);
+    text-decoration-line: line-through;
+}
+
+
+
+
+.quote{
+    font-weight: 500;
+    text-align: center;
+
+}
+.atul{
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 60px;
+}
+
+
+.completed .custom-checkbox{
+    background-color: rgba(72, 163, 0, 1);
+    border-color: rgba(72, 163, 0, 1);
+
+}
+
+@media (max-width:768px){
+    .heading{
+        font-size: 32px;
+    }
+
+    .app-container{
+        padding: 16px 32px;
+    }
+
+        .goal-container {
+            margin-bottom: 30px;
+            height: 64px;
+        }
+
+        .progress-bar {
+            height: 25px;
+            
+        }
+    
+        .progress-value {
+            height: 100%;
+            
+        }
+
+        .custom-checkbox {
+            height: 20px;
+            width: 20px;
+            
+        }
+
+
+}
